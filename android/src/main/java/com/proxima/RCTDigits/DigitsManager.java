@@ -210,7 +210,8 @@ public class DigitsManager extends ReactContextBaseJavaModule implements Lifecyc
         } else if (digitsException != null) {
             promise.reject(digitsException.toString());
         } else {
-            promise.reject("Authentification failed without exception.");
+            Log.w(TAG, "Authentication failed without exception.");
+            return;
         }
 
         promise = null;
