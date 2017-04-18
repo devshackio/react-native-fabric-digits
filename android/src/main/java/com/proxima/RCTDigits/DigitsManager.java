@@ -162,7 +162,7 @@ public class DigitsManager extends ReactContextBaseJavaModule implements Lifecyc
         paused = true;
     }
 
-    private void invokePromise() {
+    synchronized private void invokePromise() {
         if (promise == null || paused) {
             return;
         }
